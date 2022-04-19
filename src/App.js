@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Accordion from "./Accordion";
+import Accordion from "./components/Accordion";
 
 class App extends React.Component {
 
