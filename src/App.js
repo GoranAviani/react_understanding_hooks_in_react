@@ -2,7 +2,17 @@ import React from 'react';
 
 import Accordion from "./components/Accordion";
 
-class App extends React.Component {
+const items = [
+    {title: 'What is react?',
+    content: 'React is a frond end js framework'},
+    {title: 'Why use react?',
+    content: 'React is one of favourite JS library among engineers'},
+    {
+        title: 'How to you use React?',
+        content: 'You use react creating components'
+    }
+]
+
 
 export default () => {
 
@@ -10,7 +20,7 @@ export default () => {
         return (
             <div>
                 app
-                <Accordion/>
+                <Accordion items={items}/>
             </div>
         )
 
