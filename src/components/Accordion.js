@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Accordion = () => {
+export default () => {
 
     return (
         <div>
-            Accordion
+            Accordion 1
         </div>
     )
 }
-
-export default Accordion;
