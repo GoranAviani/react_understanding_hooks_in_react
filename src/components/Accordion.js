@@ -20,7 +20,7 @@ const Accordion = ({items}) => {
 
     return (
         <div>
-            {items.length}
+            {renderedItems}
         </div>
     )
 }
