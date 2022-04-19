@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default ({items}) => {
+const Accordion = ({items}) => {
 
     return (
         <div>
@@ -9,3 +9,5 @@ export default ({items}) => {
         </div>
     )
 }
+
+export default Accordion;
