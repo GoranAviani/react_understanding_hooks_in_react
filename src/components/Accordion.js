@@ -3,7 +3,7 @@ import React from 'react';
 
 const Accordion = ({items}) => {
     const renderedItems = items.map(item => {
-        return (<div>
+        return (<div key={item.title}>
                 <div className='title active'>
                     <i className='dropdown icon'></i>
                     {item.title}
@@ -19,7 +19,7 @@ const Accordion = ({items}) => {
     })
 
     return (
-        <div>
+        <div className='ui styled accordion'>
             {renderedItems}
         </div>
     )
