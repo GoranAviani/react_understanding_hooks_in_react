@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 
 const Accordion = ({items}) => {
 
-    const [activeIndex, setActiveIndex] = useState(null)
+    const [activeIndex, setActiveIndex] = useState(null);
 
     const onTitleClick = (index) => {
         setActiveIndex(index)
-        console.log(`title clicked ${index}`)
-    }
+        console.log(`title clicked ${index}`);
+    };
 
     const renderedItems = items.map((item, index) => {
         return (
