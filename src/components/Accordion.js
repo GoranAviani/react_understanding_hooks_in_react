@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const Accordion = ({items}) => {
+
     const onTitleClick = (index) => {
         console.log(`title clicked ${index}`)
     }
@@ -10,7 +11,7 @@ const Accordion = ({items}) => {
         return (
             <React.Fragment key={item.title}>
                 <div className='title active'
-                onClick={() => onTitleClick(index)}>
+                     onClick={() => onTitleClick(index)}>
                     <i className='dropdown icon'></i>
                     {item.title}
                 </div>
