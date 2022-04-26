@@ -25,12 +25,12 @@ const Search = () => {
 
   const renderedResults = results.map((result) => {
     return (
-      <div key={result.pageid} className="item">
+      <React.Fragment key={result.pageid} className="item">
         <div className="content">
           <div className="header">{result.title}</div>
           {result.snippet}
         </div>
-      </div>
+      </React.Fragment>
     );
   });
 
@@ -39,7 +39,7 @@ const Search = () => {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <div className="ui form">
         <div className="field">
           <label>Enter Search Term</label>
@@ -51,7 +51,7 @@ const Search = () => {
         </div>
       </div>
       <div className="ui celled list">{renderedResults}</div>
-    </div>
+    </React.Fragment>
   );
 };
 
