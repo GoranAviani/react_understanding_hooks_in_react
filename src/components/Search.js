@@ -25,12 +25,12 @@ const Search = () => {
 
   const renderedResults = results.map((result) => {
     return (
-      <React.Fragment key={result.pageid} className="item">
+      <div key={result.pageid} className="item">
         <div className="content">
           <div className="header">{result.title}</div>
           {result.snippet}
         </div>
-      </React.Fragment>
+      </div>
     );
   });
 
