@@ -1,11 +1,15 @@
 import React , {useState, useEffect} from "react";
-import {Axios} from "axios";
+import {axios} from "axios";
 
 const Search = () => {
     const [term, setTerm] = useState('')
 
-    useEffect(()=>{
-        console.log({term})
+    useEffect( ()=>{
+        const search = async () => {
+        await axios.get('dsadsa')
+        }
+
+        search();
     }, [term])
 
     const inputHandler = (e) => {
