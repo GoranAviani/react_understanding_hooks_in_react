@@ -34,6 +34,10 @@ const Search = () => {
     );
   });
 
+  const searchHandler = (e) => {
+    setTerm(e.target.value)
+  }
+
   return (
     <div>
       <div className="ui form">
@@ -41,7 +45,7 @@ const Search = () => {
           <label>Enter Search Term</label>
           <input
             value={term}
-            onChange={(e) => setTerm(e.target.value)}
+            onChange={searchHandler}
             className="input"
           />
         </div>
