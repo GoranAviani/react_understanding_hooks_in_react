@@ -1,31 +1,43 @@
-import React , {useState, useEffect} from "react";
-import {axios} from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Search = () => {
-    const [term, setTerm] = useState('')
+  const [term, setTerm] = useState('');
 
-    useEffect( ()=>{
-        const search = async () => {
-        await axios.get('dsadsa')
-        }
+  useEffect(() => {
+    const search = async () => {
+      await axios.get('https://en.wikipedia.org/w/api.php', {
+        params: {
+          action: 'query',
+          list: 'search',
+          origin: '*',
+          format: 'json',
+          srsearch: term,
+        },
+      });
+    };
 
-        search();
-    }, [term])
+    search();
+  }, [term]);
 
-    const inputHandler = (e) => {
-        setTerm(e.target.value)
-    }
+  const changeHandler = (e) => {
+    setTerm(e.target.value)
+  }
 
-    return (
-        <div className="ui form">
-            <div className="field">
-                <label> enter search term</label>
-                <input className="input"
-                value = {term}
-                onChange = {inputHandler}/>
-            </div>
+  return (
+    <div>
+      <div className="ui form">
+        <div className="field">
+          <label>Enter Search Term</label>
+          <input
+            value={term}
+            onChange={changeHandler}
+            className="input"
+          />
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Search;
